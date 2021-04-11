@@ -1,0 +1,45 @@
+{
+  "name": "medium-like-editor",
+  "version": "1.0.0",
+  "description": "An attempt to make plain js medium like editor",
+  "main": "./build/index.js",
+  "types": "./build/index.d.js",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durgakiran/medium-like-editor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/durgakiran/medium-like-editor/issues"
+  },
+  "homepage": "https://github.com/durgakiran/medium-like-editor#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "2.2.1",
+    "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(*.test).js": [
+      "eslint"
+    ]
+  }
+}
