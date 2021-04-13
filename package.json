@@ -2,13 +2,14 @@
     "name": "medium-like-editor",
     "version": "1.0.0",
     "description": "An attempt to make plain js medium like editor",
-    "main": "./build/index.js",
+    "main": "./build/bundle.js",
     "types": "./build/index.d.js",
     "files": [
         "build/**/*"
     ],
     "scripts": {
-        "test": "jest --watchAll --no-cache"
+        "test": "jest --watchAll --no-cache",
+        "build": "webpack --config webpack.prod.config.js"
     },
     "repository": {
         "type": "git",
@@ -24,19 +25,35 @@
     "devDependencies": {
         "@testing-library/jest-dom": "^5.11.10",
         "@types/jest": "^26.0.22",
+        "@types/mini-css-extract-plugin": "^1.4.1",
+        "@types/quill": "^2.0.6",
+        "@types/webpack": "^5.28.0",
+        "@types/webpack-dev-server": "^3.11.3",
         "@typescript-eslint/eslint-plugin": "^4.21.0",
         "@typescript-eslint/parser": "^4.21.0",
+        "css-loader": "^5.2.1",
         "eslint": "^7.24.0",
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-jest-dom": "^3.8.0",
         "eslint-plugin-testing-library": "^3.10.2",
+        "html-loader": "^2.1.2",
+        "html-webpack-plugin": "^5.3.1",
         "husky": "^4.3.0",
         "jest": "^26.6.3",
         "lint-staged": "^10.4.0",
+        "mini-css-extract-plugin": "^1.4.1",
+        "node-sass": "^5.0.0",
         "prettier": "2.2.1",
+        "sass": "^1.32.8",
+        "sass-loader": "^11.0.1",
+        "style-loader": "^2.0.0",
         "ts-jest": "^26.5.4",
-        "typescript": "^4.2.4"
+        "ts-loader": "^8.1.0",
+        "typescript": "^4.2.4",
+        "webpack": "^5.31.2",
+        "webpack-cli": "^4.6.0",
+        "webpack-dev-server": "^3.11.2"
     },
     "jest": {
         "preset": "ts-jest",
@@ -51,5 +68,8 @@
         "src/**/*.ts": [
             "eslint"
         ]
+    },
+    "dependencies": {
+        "quill": "^1.3.7"
     }
 }

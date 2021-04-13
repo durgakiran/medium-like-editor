@@ -6,7 +6,11 @@
     "extends": [
         "airbnb-base",
         "plugin:testing-library/recommended",
-        "plugin:jest-dom/recommended"
+        "plugin:jest-dom/recommended",
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,6 +23,7 @@
         "testing-library"
     ],
     "rules": {
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "import/extensions": ["warn","never", {"ignorePackages": true}]
     }
 }
